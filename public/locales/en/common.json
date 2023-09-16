@@ -1,0 +1,10 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects"
+  },
+  "footer": {
+    "copyright": "All Rights Reserved."
+  }
+}
