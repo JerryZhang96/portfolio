@@ -2,8 +2,7 @@
 
 const nextConfig = {
   reactStrictMode: true,
-  // Add basePath
-  basePath: "/github-pages",
+  // basePath: process.env.NODE_ENV === "development" ? "" : "/github-pages",
 }
 
 module.exports = nextConfig
