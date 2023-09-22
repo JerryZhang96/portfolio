@@ -1,4 +1,5 @@
 {
   "prettier.jsxSingleQuote": false,
-  "prettier.singleQuote": false
+  "prettier.singleQuote": false,
+  "i18n-ally.localesPaths": ["public/locales"]
 }
