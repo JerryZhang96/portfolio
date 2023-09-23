@@ -6,8 +6,9 @@ const Loading = () => {
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    const handleStart = (url) => url !== router.asPath && setLoading(true)
-    const handleComplete = (url) => url === router.asPath && setLoading(false)
+    const path = router.basePath + router.asPath
+    const handleStart = (url) => url !== path && setLoading(true)
+    const handleComplete = (url) => url === path && setLoading(false)
 
     router.events.on("routeChangeStart", handleStart)
     router.events.on("routeChangeComplete", handleComplete)
