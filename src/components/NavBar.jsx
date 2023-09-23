@@ -1,33 +1,23 @@
 import React, { useState } from "react"
+import Link from "next/link"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { motion } from "framer-motion"
 
+// import { Logo } from "./Logo"
 import useThemeSwitcher from "@/hooks/useThemeSwitcher"
 import useOutsideClick from "@/hooks/useOutsideClick"
-import LanguageSwitcher from "./LanguageSwitcher"
-import Link from "./Link"
 import { GithubIcon, LinkedInIcon, MoonIcon, SunIcon } from "./Icons"
+import LanguageSwitcher from "./LanguageSwitcher"
 
 const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter()
-
-  const activePath = () => {
-    let url = ""
-    if (href === "/") {
-      url = `/${router.query.locale}`
-    } else {
-      url = `/${router.query.locale}${href}`
-    }
-    return url
-  }
-
   return (
     <Link href={href} className={`${className} relative group`}>
       {title}
       <span
         className={`h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${
-          router.asPath === activePath() ? "w-full" : "w-0"
+          router.asPath === href ? "w-full" : "w-0"
         } dark:bg-light`}
       >
         &nbsp;
@@ -38,16 +28,6 @@ const CustomLink = ({ href, title, className = "" }) => {
 
 const CustomMobileLink = ({ href, title, className = "", toggle }) => {
   const router = useRouter()
-
-  const activePath = () => {
-    let url = ""
-    if (href === "/") {
-      url = `/${router.query.locale}`
-    } else {
-      url = `/${router.query.locale}${href}`
-    }
-    return url
-  }
 
   const handleClick = () => {
     toggle()
@@ -63,7 +43,7 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
       {title}
       <span
         className={`h-[1px] inline-block bg-light absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${
-          router.asPath === activePath() ? "w-full" : "w-0"
+          router.asPath === href ? "w-full" : "w-0"
         } dark:bg-dark`}
       >
         &nbsp;
@@ -153,6 +133,7 @@ const NavBar = () => {
               <MoonIcon className="fill-dark" />
             )}
           </button>
+
           <LanguageSwitcher />
         </nav>
       </div>
@@ -216,10 +197,15 @@ const NavBar = () => {
                 <MoonIcon className="fill-dark" />
               )}
             </button>
+
             <LanguageSwitcher />
           </nav>
         </motion.div>
       ) : null}
+
+      {/* <div className="absolute left-[50%] top-2 translate-x-[-50%]">
+        <Logo />
+      </div> */}
     </header>
   )
 }
