@@ -4,6 +4,7 @@ import { Montserrat } from "next/font/google"
 import { appWithTranslation } from "next-i18next"
 
 import NavBar from "@/components/NavBar"
+import Loading from "@/components/Loading"
 import Footer from "@/components/Footer"
 
 const monstserrat = Montserrat({
@@ -19,9 +20,10 @@ function App({ Component, pageProps }) {
         <link rel="icon" href="./favicon.ico" />
       </Head>
       <main
-        className={`${monstserrat.variable} font-mont bg-light dark:bg-dark w-full min-h-screen`}
+        className={`${monstserrat.variable} relative font-mont bg-light dark:bg-dark w-full min-h-screen`}
       >
         <NavBar />
+        <Loading />
         <Component {...pageProps} />
         <Footer />
       </main>

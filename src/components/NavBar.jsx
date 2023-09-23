@@ -7,7 +7,8 @@ import useThemeSwitcher from "@/hooks/useThemeSwitcher"
 import useOutsideClick from "@/hooks/useOutsideClick"
 import LanguageSwitcher from "./LanguageSwitcher"
 import Link from "./Link"
-import { GithubIcon, LinkedInIcon, MoonIcon, SunIcon } from "./Icons"
+import ThemeSwitcher from "./ThemeSwitcher"
+import { GithubIcon, LinkedInIcon } from "./Icons"
 
 const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter()
@@ -140,19 +141,6 @@ const NavBar = () => {
           >
             <LinkedInIcon />
           </motion.a>
-
-          <button
-            onClick={() => setMode(mode === "light" ? "dark" : "light")}
-            className={`ml-3 flex items-center justify-center rounded-full p-1 ${
-              mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
-            }`}
-          >
-            {mode === "dark" ? (
-              <SunIcon className="fill-dark" />
-            ) : (
-              <MoonIcon className="fill-dark" />
-            )}
-          </button>
           <LanguageSwitcher />
         </nav>
       </div>
@@ -203,23 +191,14 @@ const NavBar = () => {
             >
               <LinkedInIcon />
             </motion.a>
-
-            <button
-              onClick={() => setMode(mode === "light" ? "dark" : "light")}
-              className={`ml-3 flex items-center justify-center rounded-full p-1 ${
-                mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
-              }`}
-            >
-              {mode === "dark" ? (
-                <SunIcon className="fill-dark" />
-              ) : (
-                <MoonIcon className="fill-dark" />
-              )}
-            </button>
             <LanguageSwitcher />
           </nav>
         </motion.div>
       ) : null}
+
+      <div className="absolute left-[50%] translate-x-[-50%] lg:static lg:left-[0%] lg:translate-x-[0%]">
+        <ThemeSwitcher />
+      </div>
     </header>
   )
 }
