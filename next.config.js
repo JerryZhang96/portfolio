@@ -2,7 +2,7 @@
 
 const nextConfig = {
   reactStrictMode: true,
-  basePath: process.env.NODE_ENV === "development" ? "" : "/portfolio",
+  // basePath: process.env.NODE_ENV === "development" ? "" : "/portfolio",
   exportPathMap: async function (
     defaultPathMap,
     { dev, dir, outDir, distDir, buildId }
