@@ -4,7 +4,9 @@ import Image from "next/image"
 import { useTranslation } from "next-i18next"
 import { motion } from "framer-motion"
 
-import project1 from "../../../public/images/projects/crypto-screener-cover-image.jpg"
+import project1 from "../../../public/images/projects/merchant.png"
+import project2 from "../../../public/images/projects/coinsend.png"
+import project3 from "../../../public/images/projects/coinget.png"
 import Layout from "@/components/Layout"
 import AnimatedText from "@/components/AnimatedText"
 import { GithubIcon } from "@/components/Icons"
@@ -15,12 +17,12 @@ const FramerImage = motion(Image)
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
-    <article className="w-full flex items-center justify-between relative rounded-br-2xl rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 dark:bg-dark dark:border-light lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4">
+    <article className="relative flex items-center justify-between w-full p-12 border border-solid shadow-2xl rounded-br-2xl rounded-3xl border-dark bg-light dark:bg-dark dark:border-light lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4">
       <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] rounded-br-3xl bg-dark dark:bg-light xs:-right-2 sm:h-[102%] xs:w-full xs:rounded-[1.5rem]" />
       <Link
         href={link}
         target="_blank"
-        className="w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full"
+        className="w-1/2 overflow-hidden rounded-lg cursor-pointer lg:w-full"
       >
         <FramerImage
           src={img}
@@ -32,8 +34,8 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
           transition={{ duration: 0.2 }}
         />
       </Link>
-      <div className="w-1/2 flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6">
-        <span className="text-primary font-medium text-xl dark:text-primaryDark xs:text-base">
+      <div className="flex flex-col items-start justify-between w-1/2 pl-6 lg:w-full lg:pl-0 lg:pt-6">
+        <span className="text-xl font-medium text-primary dark:text-primaryDark xs:text-base">
           {type}
         </span>
         <Link
@@ -41,21 +43,21 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
           target="_blank"
           className="hover:underline underline-offset-2"
         >
-          <h2 className="my-2 w-full text-left text-4xl font-bold dark:text-light sm:text-sm">
+          <h2 className="w-full my-2 text-4xl font-bold text-left dark:text-light sm:text-sm">
             {title}
           </h2>
         </Link>
         <p className="my-2 font-medium text-dark dark:text-light sm:text-sm">
           {summary}
         </p>
-        <div className="mt-2 flex items-center">
+        <div className="flex items-center mt-2">
           <Link href={github} target="_blank" className="w-10">
             <GithubIcon />
           </Link>
           <Link
             href={link}
             target="_blank"
-            className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold dark:bg-light dark:text-dark sm:px-4 sm:text-base"
+            className="p-2 px-6 ml-4 text-lg font-semibold rounded-lg bg-dark text-light dark:bg-light dark:text-dark sm:px-4 sm:text-base"
           >
             Visit Project
           </Link>
@@ -67,12 +69,12 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
 
 const Project = ({ type, title, img, link, github }) => {
   return (
-    <article className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative dark:bg-dark dark:border-light xs:p-4">
+    <article className="relative flex flex-col items-center justify-center w-full p-6 border border-solid rounded-2xl border-dark bg-light dark:bg-dark dark:border-light xs:p-4">
       <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl dark:bg-light md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]" />
       <Link
         href={link}
         target="_blank"
-        className="w-full cursor-pointer overflow-hidden rounded-lg"
+        className="w-full overflow-hidden rounded-lg cursor-pointer"
       >
         <FramerImage
           src={img}
@@ -83,8 +85,8 @@ const Project = ({ type, title, img, link, github }) => {
           transition={{ duration: 0.2 }}
         />
       </Link>
-      <div className="w-full flex flex-col items-start justify-between mt-4">
-        <span className="text-primary font-medium text-xl dark:text-primaryDark lg:text-lg md:text-base">
+      <div className="flex flex-col items-start justify-between w-full mt-4">
+        <span className="text-xl font-medium text-primary dark:text-primaryDark lg:text-lg md:text-base">
           {type}
         </span>
         <Link
@@ -92,11 +94,11 @@ const Project = ({ type, title, img, link, github }) => {
           target="_blank"
           className="hover:underline underline-offset-2"
         >
-          <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl">
+          <h2 className="w-full my-2 text-3xl font-bold text-left lg:text-2xl">
             {title}
           </h2>
         </Link>
-        <div className="w-full mt-2 flex items-center justify-between">
+        <div className="flex items-center justify-between w-full mt-2">
           <Link
             href={link}
             target="_blank"
@@ -122,7 +124,7 @@ export default function Projects() {
         <title>{t("meta.title")}</title>
         <meta name="description" content={t("meta.description")} />
       </Head>
-      <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
+      <main className="flex flex-col items-center justify-center w-full mb-16 dark:text-light">
         <Layout className="pt-16">
           <AnimatedText
             text={t("projects_title")}
@@ -143,7 +145,7 @@ export default function Projects() {
               <Project
                 type="Project"
                 title="Crypto Screener Application"
-                img={project1}
+                img={project2}
                 link="/"
                 github="/"
               />
@@ -152,7 +154,7 @@ export default function Projects() {
               <Project
                 type="Project"
                 title="Crypto Screener Application"
-                img={project1}
+                img={project3}
                 link="/"
                 github="/"
               />
