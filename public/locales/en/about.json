@@ -3,5 +3,40 @@
     "title": "Chee Zhang | About",
     "description": "About me"
   },
-  "about_title": "Passion Fuels Purpose!"
+  "heading": "Passion Fuels Purpose!",
+  "biography": {
+    "title": "Biography",
+    "itemT1": "Hi, I'm Chee Zhang, a software engineer with a passion for creating responsive and visually appealing web applications. With 3 years of experience in the field, I am always looking for new and innovative ways to bring my clients' visions to life.",
+    "itemT2": "I hold the view that design extends beyond aesthetics, as its primary purpose is to address challenges and craft user-friendly, instinctive experiences.",
+    "itemT3": "Whether I'm working on a website, mobile app, or other digital product, I consistently uphold my dedication to achieving top-notch design quality and prioritizing user-centric approaches in all my endeavors. I look forward to the opportunity to bring my skills and passion to your next project.",
+    "itemT4": "satisfied clients",
+    "itemT5": "projects completed",
+    "itemT6": "years of experience"
+  },
+  "skills": "Skills",
+  "experience": {
+    "title": "Working Experience",
+    "company1": "Eemont Pte Ltd",
+    "designation1": "Software and Applications Developer",
+    "time1": "2020-2022",
+    "address1": "Singapore",
+    "work1": "Developed and maintained frontend components using React, optimizing for performance and code reusability.",
+    "link1": "https://eemont.com/",
+    "company2": "CoinsDo Pte Ltd",
+    "designation2": "Web Frontend Engineer",
+    "time2": "2022-Present",
+    "address2": "Singapore",
+    "work2": "Took initiative to plan and execute website revamp projects, focusing on user interface improvements and enhanced user experiences.",
+    "link2": "https://www.coinsdo.com/"
+  },
+  "education": {
+    "title": "Education",
+    "certificate": "Bachelor Of Electrical And Electronic Engineering",
+    "time1": "2016-2020",
+    "place1": "2016-2020",
+    "info1": "Relevant courses included Data Structures and Algorithms, Design & Innovation Project, and Web Design Application.",
+    "time2": "2019-2019",
+    "place2": "University Of Tokyo (UTokyo)",
+    "info2": "Researched on opinion dynamics and effects of social network topology on various agents."
+  }
 }

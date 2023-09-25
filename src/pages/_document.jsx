@@ -11,12 +11,14 @@ class MyDocument extends Document {
         <Head />
         <body>
           <Script id="theme-switcher" strategy="beforeInteractive">
-            {`
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-          document.documentElement.classList.add('dark')
-        } else {
-          document.documentElement.classList.remove('dark')
-        }`}
+            {
+            `
+              if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark')
+              } else {
+                document.documentElement.classList.remove('dark')
+              }`
+            }
           </Script>
           <Main />
           <NextScript />

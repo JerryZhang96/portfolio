@@ -3,5 +3,15 @@
     "title": "志樟 | 项目",
     "description": "我的项目"
   },
-  "projects_title": "想象力胜过知识！"
+  "heading": "想象力胜过知识！",
+  "projects": {
+    "title1": "精选项目",
+    "title2": "项目",
+    "itemT1": "商户后台",
+    "itemC1": "功能丰富的管理后台应用程序。 它有助于以低成本加速新的区块链/Web3项目的创建。",
+    "itemT2": "CoinSend",
+    "itemT3": "CoinGet",
+    "actionVisit": "访问",
+    "actionVisitProject": "访问项目"
+  }
 }

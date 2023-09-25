@@ -3,5 +3,8 @@
     "title": "Chee Zhang | Home",
     "description": "Welcome to my home page"
   },
-  "home_title": "Turning Vision Into Reality With Code And Design."
+  "heading": "Turning Vision Into Reality With Code And Design.",
+  "description": "As a skilled software engineer, I am dedicated to turning ideas into innovative web applications. Explore my latest projects, showcasing my expertise in React.js, Vue.js and web development.",
+  "resume": "Resume",
+  "contact": "Contact"
 }

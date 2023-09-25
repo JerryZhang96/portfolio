@@ -5,7 +5,6 @@ import { appWithTranslation } from "next-i18next"
 
 import NavBar from "@/components/NavBar"
 import Loading from "@/components/Loading"
-import Footer from "@/components/Footer"
 
 const monstserrat = Montserrat({
   subsets: ["latin"],
@@ -25,7 +24,6 @@ function App({ Component, pageProps }) {
         <NavBar />
         <Loading />
         <Component {...pageProps} />
-        <Footer />
       </main>
     </>
   )

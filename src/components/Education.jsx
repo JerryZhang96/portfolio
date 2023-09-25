@@ -1,5 +1,7 @@
 import React, { useRef } from "react"
 import { motion, useScroll } from "framer-motion"
+import { useTranslation } from "next-i18next"
+
 import LiIcon from "./LiIcon"
 
 const Details = ({ type, time, place, info }) => {
@@ -7,7 +9,7 @@ const Details = ({ type, time, place, info }) => {
   return (
     <li
       ref={ref}
-      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between md:w-[80%]"
+      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col justify-between md:w-[80%]"
     >
       <LiIcon reference={ref} />
       <motion.div
@@ -15,19 +17,21 @@ const Details = ({ type, time, place, info }) => {
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
       >
-        <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg">
+        <h3 className="text-2xl font-bold capitalize sm:text-xl xs:text-lg">
           {type}
         </h3>
-        <span className="capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm">
+        <span className="font-medium capitalize text-dark/75 dark:text-light/75 xs:text-sm">
           {time} | {place}
         </span>
-        <p className="font-medium w-full md:text-sm">{info}</p>
+        <p className="w-full font-medium md:text-sm">{info}</p>
       </motion.div>
     </li>
   )
 }
 
 const Education = () => {
+  const { t } = useTranslation("about")
+
   const ref = useRef(null)
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -36,8 +40,8 @@ const Education = () => {
 
   return (
     <div className="my-64">
-      <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">
-        Education
+      <h2 className="w-full mb-32 font-bold text-center text-8xl md:text-6xl xs:text-4xl md:mb-16">
+        {t("education.title")}
       </h2>
 
       <div ref={ref} className="w-[75%] mx-auto relative lg:w-[90%] md:w-full">
@@ -45,19 +49,18 @@ const Education = () => {
           style={{ scaleY: scrollYProgress }}
           className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light md:w-[2px] md:left-[30px] xs:left-[20px]"
         />
-        <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
+        <ul className="flex flex-col items-start justify-between w-full ml-4 xs:ml-2">
           <Details
-            type="Bachelor Of Electrical And Electronic Engineering"
-            time="2016-2020"
-            place="Nanyang Technological University (NTU)"
-            info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial 
-            Intelligence."
+            type={t("education.certificate")}
+            time={t("education.time1")}
+            place={t("education.place1")}
+            info={t("education.info1")}
           />
           <Details
-            type="Bachelor Of Electrical And Electronic Engineering"
-            time="2019-2019"
-            place="University Of Tokyo (UTokyo)"
-            info="ESEP-G"
+            type={t("education.certificate")}
+            time={t("education.time2")}
+            place={t("education.place2")}
+            info={t("education.info2")}
           />
         </ul>
       </div>

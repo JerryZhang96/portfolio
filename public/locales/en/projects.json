@@ -1,7 +1,17 @@
 {
   "meta": {
     "title": "Chee Zhang | Projects",
-    "description": "About me"
+    "description": "My projects"
   },
-  "projects_title": "Imagination Trumps Knowledge!"
+  "heading": "Imagination Trumps Knowledge!",
+  "projects": {
+    "title1": "Featured Project",
+    "title2": "Project",
+    "itemT1": "Merchant Corporate Backend",
+    "itemC1": "A feature-rich Admin Dashboard App. It helps accelerate the creation of new blockchain/Web3 projects at a low cost.",
+    "itemT2": "CoinSend",
+    "itemT3": "CoinGet",
+    "actionVisit": "Visit",
+    "actionVisitProject": "Visit Project"
+  }
 }
