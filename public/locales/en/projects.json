@@ -7,10 +7,11 @@
   "projects": {
     "title1": "Featured Project",
     "title2": "Project",
-    "itemT1": "Merchant Corporate Backend",
-    "itemC1": "A feature-rich Admin Dashboard App. It helps accelerate the creation of new blockchain/Web3 projects at a low cost.",
-    "itemT2": "CoinSend",
-    "itemT3": "CoinGet",
+    "itemT1": "CoinsDo Website",
+    "itemC1": "A feature-rich, fully responsive website with blogs",
+    "itemT2": "Merchant Corporate",
+    "itemT3": "CoinSend",
+    "itemT4": "CoinGet",
     "actionVisit": "Visit",
     "actionVisitProject": "Visit Project"
   }

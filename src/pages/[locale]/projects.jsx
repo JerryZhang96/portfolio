@@ -3,9 +3,10 @@ import Image from "next/image"
 import { useTranslation } from "next-i18next"
 import { motion } from "framer-motion"
 
-import project1 from "../../../public/images/projects/merchant.png"
-import project2 from "../../../public/images/projects/coinsend.png"
-import project3 from "../../../public/images/projects/coinget.png"
+import project1 from "../../../public/images/projects/coinsdo.png"
+import project2 from "../../../public/images/projects/merchant.png"
+import project3 from "../../../public/images/projects/coinsend.png"
+import project4 from "../../../public/images/projects/coinget.png"
 import Layout from "@/components/Layout"
 import Link from "@/components/Link"
 import AnimatedText from "@/components/AnimatedText"
@@ -59,11 +60,11 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
           >
             {t("projects.actionVisitProject")}
           </Link>
-          {github && 
+          {github && (
             <Link href={github} target="_blank" className="w-10">
               <GithubIcon />
             </Link>
-          }
+          )}
         </div>
       </div>
     </article>
@@ -111,11 +112,11 @@ const Project = ({ type, title, img, link, github }) => {
           >
             {t("projects.actionVisit")}
           </Link>
-          {github && 
+          {github && (
             <Link href={github} target="_blank" className="w-8 md:w-6">
               <GithubIcon />
             </Link>
-          }
+          )}
         </div>
       </div>
     </article>
@@ -137,6 +138,7 @@ export default function Projects() {
             text={t("heading")}
             className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
+
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12">
               <FeaturedProject
@@ -144,7 +146,7 @@ export default function Projects() {
                 title={t("projects.itemT1")}
                 summary={t("projects.itemC1")}
                 img={project1}
-                link="https://merchant.coinsdotest.com"
+                link="https://web.coinsdotest.com"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
@@ -152,7 +154,7 @@ export default function Projects() {
                 type={t("projects.title2")}
                 title={t("projects.itemT2")}
                 img={project2}
-                link="https://coinsend.coinsdotest.com"
+                link="https://merchant.coinsdotest.com"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
@@ -160,6 +162,14 @@ export default function Projects() {
                 type={t("projects.title2")}
                 title={t("projects.itemT3")}
                 img={project3}
+                link="https://coinsend.coinsdotest.com"
+              />
+            </div>
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                type={t("projects.title2")}
+                title={t("projects.itemT4")}
+                img={project4}
                 link="https://coinget.coinsdotest.com"
               />
             </div>

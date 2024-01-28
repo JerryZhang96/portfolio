@@ -7,10 +7,11 @@
   "projects": {
     "title1": "精选项目",
     "title2": "项目",
-    "itemT1": "商户后台",
-    "itemC1": "功能丰富的管理后台应用程序。 它有助于以低成本加速新的区块链/Web3项目的创建。",
-    "itemT2": "CoinSend",
-    "itemT3": "CoinGet",
+    "itemT1": "CoinsDo官网",
+    "itemC1": "一个功能丰富、完全响应式的网站，带有博客",
+    "itemT2": "商户后台",
+    "itemT3": "CoinSend",
+    "itemT4": "CoinGet",
     "actionVisit": "访问",
     "actionVisitProject": "访问项目"
   }
